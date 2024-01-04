@@ -1,10 +1,13 @@
 function  love.load ()
 require "personaje"
 require "autornil"
+require "torreta"
+Fondo = love.graphics.newImage("spr/Fondos.png")
    math.randomseed(os.time())
-    Tanque:init(300, 650)
+    Tanque:init(300, 300)
+    Torreta:init(Tanque.x, Tanque.y)
     Rt = {}
-    Tiempo = 30
+    Tiempo = 150
 end
 function love.update(dt)
     
@@ -21,15 +24,18 @@ function love.update(dt)
     for i, v in ipairs(Rt) do
         v:update(dt)
     end
+  
     Tanque:update(dt)
-    
+    Torreta:update(dt)
 
 end
 function love.draw()
-
+    love.graphics.draw(Fondo, 0, 0)
     Tanque:draw()
+    Torreta:draw()
     for i, v in ipairs(Rt) do
         v:draw()
         
     end
+    
 end

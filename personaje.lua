@@ -24,6 +24,6 @@ end
 
 
 function Tanque:draw()
-    love.graphics.draw(Jugador, Tanque.x , Tanque.y)
+    love.graphics.draw(Jugador, Tanque.x , Tanque.y , 0 , 1 , 1, 50 , 80)
     
 end

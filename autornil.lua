@@ -6,7 +6,7 @@ function Raton:new(x, y)
     self = setmetatable({},Raton)
     self.x = x
     self.y = y 
-    self.vel = 100
+    self.vel = 40
     return self
 end
 function Raton:update(dt)
