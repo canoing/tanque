@@ -11,11 +11,11 @@ function Torreta:update(dt)
     Torreta.x = Tanque.x  
     Torreta.y = Tanque.y 
     if love.keyboard.isDown("a") then
-        Torreta.angulo = Torreta.angulo + 1 * dt
+        Torreta.angulo = Torreta.angulo - 1 * dt
 
         elseif love.keyboard.isDown("d") then
 
-            Torreta.angulo = Torreta.angulo - 1 * dt
+            Torreta.angulo = Torreta.angulo + 1 * dt
 
 
         end
